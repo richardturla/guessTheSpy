@@ -40,7 +40,11 @@
                 <div class="col-md-12 text-center" id="messages"></div>
             </div>
 
-            
+            <footer>
+                <small>
+                    v2024.0.1
+                </small>
+            </footer>
 
 
 
@@ -159,4 +163,15 @@
         function dateTimeNew(){
             return timestamp = "2024-01-11 21:37:01";
         }
+
+        pubnub.fetchMessages(
+        {
+            channels: [DEFINED_CHANNEL],
+            end: '15343325004275466',
+            count: 100
+        },
+        function(status, response) {
+            console.log(status, response);
+        }
+        );
         </script>
